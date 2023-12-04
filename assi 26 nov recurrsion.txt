@@ -1,0 +1,51 @@
+## Find the request relation by the substitute method
+T(n)=T(n-1)+c-----------1
+T(n-1)=T(n-1-1)+c+c
+T(n-1)=T(n-2)+2c---------------2
+T(n-2)=T(n-3)+3c------------3
+  k times
+    T(n)= T(n-k)+kc
+    n-k=1
+    k=n-1
+    put the value
+    =T(n-n+1)+(n-1)c
+    =T(1)+nc-c
+    =nc-c
+    o(n)--------ans
+
+
+
+b) T(n)=2T(n/2)+n solv it by substitued method
+solution---T(n)=2T(n/2)+n-------1
+           T(n/2)=2T(n/4)+n/2--------2
+           T(n/4)=2T(n/8)+n/4
+           
+           by eqetion no 1 put the value of n/2
+           T(n)=2.2T(n/4)+n/2+n
+                =2.[2T(n/4)+n/2]+n
+                =2(2T(n/4)+n/2)+n
+                =2**2T(n/4)+n+n
+                =2**2T(n/2**2)+2n
+                
+                put the value of n/4 now
+                
+                =2**2[2T(n/8)+n/4]+2n
+                =2**3[2T(n/8)+n/4]+3n
+                
+                       ------k times
+                       
+                       2**kT(n/2**k)+kn
+                       
+                       so n/2**k=1
+                          n=2**k
+                          
+                          take loge both of side
+                          logn=log2**k
+                          k=logn  put the value of k---
+                      =2**kT(1)+kn
+                      =n(1)+nlogn
+                       = n+nlogn  
+                       =o(nlogn)
+                          
+                          
+                          
